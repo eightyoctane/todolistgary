@@ -1,0 +1,14 @@
+--- 
+applications: 
+- name: todolistgary
+  framework: play
+  runtime: java
+  memory: 256M
+  instances: 1
+  url: todolistgary.${target-base}
+  path: dist/todolist-1.0-SNAPSHOT.zip
+  services: 
+    todolist: 
+      vendor: mysql
+      version: "5.1"
+      tier: free
